@@ -4,26 +4,43 @@
     - NPM, Bower
 
 # 디렉토리 구조
+    - src : 원본 소스
+        + LArray.js : L.class.LArray
+        
+        + LObserver.js : L.class.Observer
+        
+        + common.js : 공통 파일
 
-    - src : LArray.js, Observer.js, common.js
+        + common.shim.js : 폴리필 공통 파일
+
+        + common.node.js : node 전용 공통 파일
+
+        + common.web.js : 웹 전용 공통 파일
+        
+    - external : 외부파일
+        + 없음
 
     - test : 디버깅 & 테스트
-        + browser : 브라우저 테스트 디버깅 => 개발자도구 (IE, 크롬)
+        + web : 브라우저 테스트 디버깅 => 개발자도구 (IE, 크롬)
+
         + node : 테스트 디버깅 => VS.Code
             - task : gulp, grant 도구    (*추후)
 
-    - dist  
+    - build : ? 정확한 용도 확인
+
+    - dist  : 배포
         + LCommon.js  => 공통 통합 파일
 
         + Lcommon.node.js => LCommon + node 공통 통합 파일
+            - Lcommon.node.min.js => 압축 파일
 
         + Lcommon.web.js => LCommon + web(DOM, HTML 등) 공통 통합 파일        
-
-    - external : 외부파일 (*없음)
-
-    - build : ? 정확한 용도 확인
+            - Lcommon.web.min.js => 압축 파일
     
-    - api : .html,  .md  형식의 문서 파일
+    - api : 문서
+        + ~.html : html 문서   
+        
+        + ~.md : github 문서
 
 # 개발 시나리오
 
@@ -34,11 +51,18 @@
 
 # 태그명 규칙
 
-    - 1.0.0 : 버전명 표기
+    - 0.0.0 : 버전명 표기  (주버전.기능버전.패치버전)
+    
+        + 초기 개발시 주버전 "0" 으로 시작
+
+        + 주버전 "1" 번부터 태그 붙임
 
 # 브런치 규칙
 
     - 논리적 관점 명칭 지정
+
+    - 브런치는 병합을 기본 병합을 목표로함
+        * 파일 및 테스트 디버깅 분리의 목적
 
 # 내용
 
@@ -62,13 +86,5 @@
 
     - L.class.* : 생성형 함수 (클래스)
 
-    - L.DOM.* : document object model (html, HTMLElement 등)
+    - L.web.* : 웹관련 (html, HTMLElement 등)
         (* 관련 기능이 적어서 통합하여 사용)
-
-# LCommon 이후 구성 방식 (분리 구성시)
-
-    브런치 및 태그로 분리
-
-    - 공통 : master # 버전
-    - 공통 > node 공통   : 
-    - 공통 > browser 공통  :      
