@@ -11,7 +11,7 @@
         
         + common.js : 공통 파일
 
-        + common.shim.js : 폴리필 공통 파일
+        + common.shim.js : 폴리필 공통 파일 (web전용)
 
         + common.node.js : node 전용 공통 파일
 
