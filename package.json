@@ -1,0 +1,22 @@
+{
+  "name": "lcommon",
+  "version": "0.1.0",
+  "description": "# 용도 : node + web  (공통사용)     - NPM, Bower",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logicfeel/LCommon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/logicfeel/LCommon/issues"
+  },
+  "homepage": "https://github.com/logicfeel/LCommon#readme"
+}
