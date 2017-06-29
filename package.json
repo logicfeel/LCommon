@@ -1,7 +1,7 @@
 {
   "name": "lcommon",
   "version": "0.1.0",
-  "description": "# 용도 : node + web  (공통사용)     - NPM, Bower",
+  "description": "node + web  (공통사용)",
   "main": "index.js",
   "directories": {
     "test": "test"
