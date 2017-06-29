@@ -31,9 +31,6 @@
     - dist  : 배포
         + LCommon.js  => 공통 통합 파일
 
-        + Lcommon.node.js => LCommon + node 공통 통합 파일
-            - Lcommon.node.min.js => 압축 파일
-
         + Lcommon.web.js => LCommon + web(DOM, HTML 등) 공통 통합 파일        
             - Lcommon.web.min.js => 압축 파일
     
