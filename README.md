@@ -1,7 +1,7 @@
 # LCommon
 
 ## 용도 : node + web  (공통사용)
-    - NPM, Bower
+    NPM, Bower
 
 ## 디렉토리 구조
     - src : 원본 소스
