@@ -3,12 +3,13 @@
     - 박스 내용 (탭)
 
 
-** 굮음글씨 **
+    ** 굮음글씨 **
 
-* 이텍릭 *
-__ 이텍릭 __
+    * 이텍릭 *
 
-~~ 삭제줄 ~~
+    __ 이텍릭 __
+
+    ~~ 삭제줄 ~~
 
 
 In the words of Abraham Lincoln:
@@ -27,10 +28,6 @@ In the words of Abraham Lincoln:
  - [ ] 체크박스 (체크)
  - [x] 체크박스 
 
------- |---------
-타이틀1 | 타이틀 2
-------- |----------
-내용    |  내용2
 
 테이블
 
@@ -54,12 +51,7 @@ Content Cell  | Content Cell
 ##### This is a H5
 ###### This is a H6
 
-> 블럭 
-    블럭내용 1
-    블럭내용 2
-
-    > 내부 블럭
-        서브블럭
+> 한줄 블럭
 
 순서있는 목록(번호)    
 1. 첫번째
@@ -81,8 +73,9 @@ Content Cell  | Content Cell
 - 파랑    
 
 
-Markup : ```javascript
+```javascript
+    var abc;
+    String;
+ 
+```
 
-var specificLanguage_code
-         
-         ```
