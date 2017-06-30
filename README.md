@@ -85,23 +85,14 @@
         - L.web.* : 웹 관련 (DOM HTMLElement 등)
 
         - L.web.querySelectorOuter() : querySelector 부모(바깥) 바깥 요소 선택
+            종속성 (document)
         
         - L.web.cutElement() : 요소 잘라내기
-
-## 내용
-
+            종속성 (HTMLElement) 
 
     - 폴리필(웹)
         + Object.create()
         + String.prototype.endsWith()    
-
-    - 모듈(함수)
-        + common.getArrayLevel()
-        + common.isArray()
-        + common.querySelecotrOuter() : 종속성 (document)
-        + common.cutElement() : 종속성 (HTMLElement) 
-
-    - 모듈(생성형 함수 *클래스)
 
 ## 모듈구조
     - L
