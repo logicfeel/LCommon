@@ -1,5 +1,9 @@
+// 전역 모듈 생성
+if (typeof L === "undefined") L = {}; 
+
 (function(global) {
     'use strict';
+
     // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     // 옵서버 패턴 
     // @종속성 : 
@@ -55,7 +59,13 @@
         };
     }());
 
-    // 전역 배포
-    global.Observer = global.Observer || Observer;
+    // 배포 (RequireJS 용도)
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports  = Observer;
+    }
+
+    // 전역 배포 (모듈형식)
+    L.class                 = L.class || {};
+    L.class.Observer        = Observer;    
 
 }(this));

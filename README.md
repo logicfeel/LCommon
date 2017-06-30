@@ -76,6 +76,8 @@
 
         - L.arr.isArray() : Boolean  `배열 여부`
 
+        - L.class.* : 클래스 관련 (생성형 함수)
+
         - L.class.Observer() : 옵서버 클래스 (이벤트에 이용)
 
         - L.class.LArray() : 속성형 배열 클래스

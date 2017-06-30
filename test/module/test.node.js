@@ -1,8 +1,8 @@
 
 
 // 전역 설정
-L = {};
-LCommon = L;
+// L = {};
+// LCommon = L;
 
 
 // var a = require('./a.js');
@@ -14,6 +14,8 @@ LCommon = L;
 require('./a.js');
 require('./b.js');
 
+L.func1();
+L.func2();
 
 abc = 'aaa';
 

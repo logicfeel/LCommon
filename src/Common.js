@@ -1,7 +1,10 @@
+// 전역 모듈 생성
+if (typeof L === "undefined") L = {}; 
+
 (function(global) {
     'use strict';
 
-    var L = global.L || {};
+    L = L || {};
 
     // 배열 차원 검사 (최대 제한값 10 설정됨)
     // 첫번째 배열만 검사 (배열의 넢이가 같은 겨우만)
@@ -36,24 +39,14 @@
      * node 등록(주입)  AMD (RequireJS) 방식만 사용함
      * ! 추후 CommonJS (define) 방식 추가 필요함
      */
-    // 
     if (typeof module !== 'undefined' && module.exports) {
-        // module.exports.arr              = module.exports.arr || {};
-        // module.exports.arr.getArrayLevel  = getArrayLevel;
-        // module.exports.arr.isArray        = isArray;
-
-        // module.exports.getArrayLevel  = getArrayLevel;
-        // module.exports.isArray        = isArray;
-
-        module.exports  = getArrayLevel;
-        module.exports  = isArray;
-
-
-    } else {
-        global.L                    = global.L || {};
-        global.L.arr                = global.L.arr || {};
-        global.L.arr.getArrayLevel  = getArrayLevel;
-        global.L.arr.isArray        = isArray;
+        module.exports.getArrayLevel    = getArrayLevel;
+        module.exports.isArray          = isArray;
     }
+
+    // 전역 배포 (모듈형식)
+    L.arr                   = L.arr || {};
+    L.arr.getArrayLevel     = getArrayLevel;
+    L.arr.isArray           = isArray;
 
 }(this));

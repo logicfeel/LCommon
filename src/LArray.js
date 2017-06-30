@@ -1,6 +1,9 @@
+// 전역 모듈 생성
+if (typeof L === "undefined") L = {}; 
 
 (function(global) {
     'use strict';
+
     /**
      * !! prototype 노출형 부모 (부모.call(this);  <= 불필요
      * 제한1 : var(private) 사용 못함
@@ -109,7 +112,13 @@
         return null;
     };
 
+    // 배포 (RequireJS 용도)
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports  = LArray;
+    }
 
-    global.LArray = global.LArray || LArray;
+    // 전역 배포 (모듈형식)
+    L.class                 = L.class || {};
+    L.class.LArray          = LArray;
 
 }(this));
