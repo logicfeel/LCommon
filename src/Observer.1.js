@@ -1,6 +1,8 @@
-(function(G) {
+// 전역 모듈 생성
+if (typeof L === "undefined") L = {}; 
+
+(function(global) {
     'use strict';
-    var _G;     // 내부 전역
 
     // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     // 옵서버 패턴 
@@ -57,22 +59,13 @@
         };
     }());
 
-
-    /**
-     * 배포
-     * node 등록(주입)  AMD (RequireJS) 방식만 사용함
-     * ! 추후 CommonJS (define) 방식 추가 필요함
-     */
+    // 배포 (RequireJS 용도)
     if (typeof module !== 'undefined' && module.exports) {
         module.exports  = Observer;
-        _G = global;    // node 
-    } else {
-        _G = G;         // web
     }
 
     // 전역 배포 (모듈형식)
-    _G.L                    = _G.L || {};
-    _G.L.class              = _G.L.class || {};
-    _G.L.class.Observer     = Observer;
+    L.class                 = L.class || {};
+    L.class.Observer        = Observer;    
 
 }(this));

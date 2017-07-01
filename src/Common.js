@@ -1,10 +1,6 @@
-// 전역 모듈 생성
-if (typeof L === "undefined") L = {}; 
-
-(function(global) {
+(function(G) {
     'use strict';
-
-    L = L || {};
+    var _G;     // 내부 전역
 
     // 배열 차원 검사 (최대 제한값 10 설정됨)
     // 첫번째 배열만 검사 (배열의 넢이가 같은 겨우만)
@@ -42,11 +38,16 @@ if (typeof L === "undefined") L = {};
     if (typeof module !== 'undefined' && module.exports) {
         module.exports.getArrayLevel    = getArrayLevel;
         module.exports.isArray          = isArray;
+        _G = global;    // node 
+    } else {
+        _G = G;         // web
     }
 
     // 전역 배포 (모듈형식)
-    L.arr                   = L.arr || {};
-    L.arr.getArrayLevel     = getArrayLevel;
-    L.arr.isArray           = isArray;
+    _G.L                    = _G.L || {};
+    _G.L.arr                = _G.L.arr || {};
+    _G.L.arr.getArrayLevel  = getArrayLevel;
+    _G.L.arr.isArray        = isArray;
+
 
 }(this));

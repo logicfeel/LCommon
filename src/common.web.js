@@ -1,4 +1,4 @@
-(function(global) {
+(function(G) {
     'use strict';
 
     /**
@@ -60,9 +60,9 @@
     };
 
     // 전역 모듈 배포 (web 전용)
-    global.L                        = global.L || {};
-    global.L.web                    = global.L.web || {};
-    global.L.web.querySelecotrOuter = querySelecotrOuter;
-    global.L.web.cutElement         = cutElement;
+    G.L                        = G.L || {};
+    G.L.web                    = G.L.web || {};
+    G.L.web.querySelecotrOuter = querySelecotrOuter;
+    G.L.web.cutElement         = cutElement;
 
 }(this));    

@@ -1,8 +1,6 @@
-// 전역 모듈 생성
-if (typeof L === "undefined") L = {}; 
-
-(function(global) {
+(function(G) {
     'use strict';
+    var _G;     // 내부 전역
 
     /**
      * !! prototype 노출형 부모 (부모.call(this);  <= 불필요
@@ -112,13 +110,21 @@ if (typeof L === "undefined") L = {};
         return null;
     };
 
-    // 배포 (RequireJS 용도)
+    /**
+     * 배포
+     * node 등록(주입)  AMD (RequireJS) 방식만 사용함
+     * ! 추후 CommonJS (define) 방식 추가 필요함
+     */
     if (typeof module !== 'undefined' && module.exports) {
         module.exports  = LArray;
+        _G = global;    // node 
+    } else {
+        _G = G;         // web
     }
 
     // 전역 배포 (모듈형식)
-    L.class                 = L.class || {};
-    L.class.LArray          = LArray;
+    _G.L                    = _G.L || {};
+    _G.L.class              = _G.L.class || {};
+    _G.L.class.LArray       = LArray;
 
 }(this));
