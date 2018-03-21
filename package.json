@@ -1,6 +1,6 @@
 {
-  "name": "lcommon",
-  "version": "1.0.1",
+  "name": "larray",
+  "version": "0.0.1",
   "description": "node + web  (공통사용)",
   "main": "index.js",
   "directories": {
