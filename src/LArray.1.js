@@ -14,13 +14,11 @@
      * 장점 : 중복 호출 방지 (성능 향상)  **
      * @name LAarry (LoagicArayy)
      */
-    function LArray(pThis, pName) {
+    function LArray() {
 
         this.isDebug        = false;
         this._items         = [];
-        
-        this._SCOPE         = pName ? pName : 'LArray';
-        this._this          = pThis;
+        this._SCOPE         = "LArray";
     }
     (function() {   // prototype 상속 정의
         LArray.prototype =  Object.create(Array.prototype); // Array 상속
